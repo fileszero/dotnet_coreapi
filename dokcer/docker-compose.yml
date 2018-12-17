@@ -1,0 +1,11 @@
+---
+
+version: "3"
+services:
+  dotnet:
+    build: ./dotnet
+    volumes:
+      - ../app:/app
+    ports:
+      - "5000:5000"
+      - "5001:5001"
