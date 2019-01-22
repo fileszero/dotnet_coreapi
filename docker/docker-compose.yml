@@ -1,0 +1,21 @@
+---
+
+version: "3"
+services:
+  dotnet:
+    build: ./dotnet
+    volumes:
+      - ../app:/app
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_URLS=http://*:5000
+    tty: true
+#  docker-compose up -d
+#  docker exec -it docker_dotnet_1 bash
+#/app# cd TodoApi/
+#/app/TodoApi# dotnet restore
+#/app/TodoApi# dotnet run
+
+#  curl http://localhost:5000/api/Values
